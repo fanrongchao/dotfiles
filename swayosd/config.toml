@@ -1,0 +1,4 @@
+[server]
+style = "/home/frc/.config/swayosd/current.css"
+
+[client]

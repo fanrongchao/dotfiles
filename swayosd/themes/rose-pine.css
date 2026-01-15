@@ -1,0 +1,22 @@
+window#osd {
+  border-radius: 999px;
+  border: none;
+  background: rgba(25, 23, 36, 0.85);
+  color: #e0def4;
+}
+
+window#osd image,
+window#osd label {
+  color: #e0def4;
+}
+
+window#osd progressbar trough,
+window#osd segmentedprogress trough,
+window#osd segment {
+  background: rgba(224, 222, 244, 0.45);
+}
+
+window#osd progressbar progress,
+window#osd segment.active {
+  background: #c4a7e7;
+}

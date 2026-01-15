@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+hypr_conf="$HOME/dotfiles/hypr/hyprland.conf"
+
+theme=$(sed -n 's/^\$theme[[:space:]]*=[[:space:]]*//p' "$hypr_conf" | head -n1)
+if [ -z "$theme" ]; then
+  exit 0
+fi
+
+base="$HOME/dotfiles"
+
+copy_theme() {
+  local src="$1"
+  local dest="$2"
+  if [ -f "$src" ]; then
+    mkdir -p "$(dirname "$dest")"
+    cp -f "$src" "$dest"
+  fi
+}
+
+copy_theme "$base/waybar/themes/$theme.css" "$base/waybar/themes/current.css"
+copy_theme "$base/swaync/themes/$theme.css" "$base/swaync/themes/current.css"
+copy_theme "$base/tmux/themes/$theme.conf" "$base/tmux/theme.conf"
+copy_theme "$base/kitty/themes/$theme.conf" "$HOME/.config/kitty/theme.conf"
+copy_theme "$base/hyprlock/themes/$theme.conf" "$base/hyprlock/hyprlock.conf"
+copy_theme "$base/swayosd/themes/$theme.css" "$HOME/.config/swayosd/current.css"
+
+fuzzel_base="$base/fuzzel/fuzzel.base.ini"
+fuzzel_theme="$base/fuzzel/themes/$theme.ini"
+if [ -f "$fuzzel_base" ] && [ -f "$fuzzel_theme" ]; then
+  cat "$fuzzel_base" "$fuzzel_theme" > "$base/fuzzel/fuzzel.ini"
+fi
+
+pkill -SIGUSR2 waybar 2>/dev/null || true
+swaync-client -rs 2>/dev/null || true
+if command -v tmux >/dev/null 2>&1; then
+  tmux source-file "$HOME/.config/tmux/tmux.conf" 2>/dev/null || true
+fi

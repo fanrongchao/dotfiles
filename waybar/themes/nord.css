@@ -1,0 +1,7 @@
+@define-color wb_bg rgba(46, 52, 64, 0.92);
+@define-color wb_fg #e5e9f0;
+@define-color wb_muted #d8dee9;
+@define-color wb_accent #81a1c1;
+@define-color wb_surface rgba(59, 66, 82, 0.65);
+@define-color wb_surface_strong rgba(67, 76, 94, 0.85);
+@define-color wb_notif #ebcb8b;

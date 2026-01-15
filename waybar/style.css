@@ -1,3 +1,5 @@
+@import url("themes/current.css");
+
 * {
   font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
   font-size: 12px;
@@ -7,19 +9,19 @@
 }
 
 window#waybar {
-  background: rgba(17, 17, 27, 0.92);
-  color: #cdd6f4;
+  background: @wb_bg;
+  color: @wb_fg;
 }
 
 #workspaces button {
   padding: 0 8px;
-  color: #a6adc8;
+  color: @wb_muted;
   background: transparent;
 }
 
 #workspaces button.active {
   color: #1e1e2e;
-  background: #89b4fa;
+  background: @wb_accent;
   border-radius: 8px;
 }
 
@@ -27,9 +29,9 @@ window#waybar {
   padding: 0 10px;
   margin: 6px 0;
   border-radius: 10px;
-  background: rgba(30, 30, 46, 0.65);
+  background: @wb_surface;
 }
 
 #custom-notification {
-  color: #f9e2af;
+  color: @wb_notif;
 }
