@@ -5,7 +5,7 @@
   "spacing": 10,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/notification", "custom/fcitx", "pulseaudio", "network", "battery", "tray"],
+  "modules-right": ["custom/notification", "pulseaudio", "network", "battery", "tray"],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -40,14 +40,6 @@
     "on-click": "swaync-client -t",
     "on-click-right": "swaync-client -d",
     "escape": true
-  },
-
-  "custom/fcitx": {
-    "exec": "~/dotfiles/scripts/waybar-fcitx5",
-    "return-type": "json",
-    "interval": 1,
-    "tooltip": true,
-    "on-click": "fcitx5-remote -t"
   },
 
   "pulseaudio": {
