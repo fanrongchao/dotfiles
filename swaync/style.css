@@ -1,0 +1,26 @@
+* {
+  font-family: "CaskaydiaCove Nerd Font", "JetBrainsMono Nerd Font", sans-serif;
+}
+
+.control-center {
+  background: rgba(17, 17, 27, 0.94);
+  color: #cdd6f4;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.notification-row {
+  background: rgba(30, 30, 46, 0.70);
+  border-radius: 12px;
+  margin: 8px 0;
+  padding: 8px;
+}
+
+.notification-row:hover {
+  background: rgba(49, 50, 68, 0.85);
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
