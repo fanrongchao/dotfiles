@@ -49,6 +49,8 @@
       "default": ["󰕿", "󰖀", "󰕾"]
     },
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
     "on-click-right": "pavucontrol"
   },
 
@@ -56,11 +58,15 @@
     "format-wifi": "󰖩 {essid}",
     "format-ethernet": "󰈀 {ifname}",
     "format-disconnected": "󰖪 down",
-    "tooltip-format": "{ipaddr}"
+    "tooltip-format": "{ipaddr}",
+    "on-click": "kitty -e nmtui"
   },
 
   "battery": {
     "format": "{icon} {capacity}%",
+    "format-charging": "󱐋 {icon} {capacity}%",
+    "format-plugged": "󱐋 {icon} {capacity}%",
+    "format-time": "{H}:{m}",
     "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
     "states": {
       "warning": 20,
