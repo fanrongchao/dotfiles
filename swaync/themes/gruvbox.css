@@ -1,0 +1,4 @@
+@define-color sn_bg rgba(29, 32, 33, 0.94);
+@define-color sn_fg #ebdbb2;
+@define-color sn_surface rgba(40, 40, 40, 0.70);
+@define-color sn_surface_hover rgba(60, 56, 54, 0.85);

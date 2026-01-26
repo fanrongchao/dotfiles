@@ -1,4 +1,4 @@
 [server]
-style = "/home/frc/dotfiles/swayosd/style.css"
+style = "/home/frc/.config/swayosd/current.css"
 
 [client]
